@@ -85,6 +85,18 @@
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<version>10.8.1</version>
+				<configuration>
+					<url>${FLYWAY_URL}</url>
+					<user>${DATABASE_USERNAME}</user>
+					<password>${DATABASE_PASSWORD}</password>
+					<cleanDisabled>false</cleanDisabled>
+				</configuration>
+			</plugin>
+
+			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
