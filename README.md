@@ -4,6 +4,8 @@ This Spring Boot application processes and stores XML data into a PostgreSQL dat
 
 - **Live Demo:** [Swagger UI](https://kopidlno-app.onrender.com/swagger-ui/index.html)  
   **Note:** Please be patient, the page may take up to 50 seconds to load as the cloud service Render.com restarts the application upon receiving a request.
+- **Docker Hub Image:** The Docker image for this application can be found [here](https://hub.docker.com/r/pocten/kopidlno-app).
+
 
 ## Project Overview
 
