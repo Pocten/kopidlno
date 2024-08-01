@@ -1,0 +1,56 @@
+openapi: 3.0.0
+info:
+  title: Kopidlno API
+  description: API for processing and storing XML data
+  version: "1.0"
+paths:
+  /process-data:
+    get:
+      summary: Process XML data and store in database
+      responses:
+        '200':
+          description: Data processed successfully
+        '500':
+          description: Error processing data
+  /districts:
+    get:
+      summary: Get all districts (obce)
+      responses:
+        '200':
+          description: A list of districts (obce)
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DistrictDto'
+  /district-parts:
+    get:
+      summary: Get all district parts (casti obce)
+      responses:
+        '200':
+          description: A list of district parts (casti obce)
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DistrictPartDto'
+components:
+  schemas:
+    DistrictDto:
+      type: object
+      properties:
+        code:
+          type: integer
+        name:
+          type: string
+    DistrictPartDto:
+      type: object
+      properties:
+        code:
+          type: integer
+        name:
+          type: string
+        district:
+          $ref: '#/components/schemas/DistrictDto'
