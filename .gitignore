@@ -3,6 +3,8 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+xml/
+kopidlno.zip
 
 ### STS ###
 .apt_generated
